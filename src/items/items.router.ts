@@ -14,7 +14,7 @@ export const itemsRouter = express.Router();
  * Controller Definitions
  */
 
-itemsRouter.get("/getColors", async (req: Request, res: Response) => {
+itemsRouter.get("/getAllColors", async (req: Request, res: Response) => {
     res.status(200).send(ItemService.colorOptions);
 });
 
