@@ -2,6 +2,18 @@
  * Service Methods
  */
 
+import { Color } from "./item.interface";
+
+export const colorOptions: Color[] = [
+    { id: "red", name: "Red" },
+    { id: "blue", name: "Blue" },
+    { id: "yellow", name: "Yellow" },
+    { id: "orange", name: "Orange" },
+    { id: "purple", name: "Purple" },
+    { id: "green", name: "Green" },
+    { id: "black", name: "Black" }
+];
+
 export const createMap = (columns: any, lines: any, colors: any) =>
     Array.from({ length: columns }).map((v, l) =>
         Array.from({ length: lines }).map((x, c) => ({

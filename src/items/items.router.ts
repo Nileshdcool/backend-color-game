@@ -15,16 +15,7 @@ export const itemsRouter = express.Router();
  */
 
 itemsRouter.get("/getColors", async (req: Request, res: Response) => {
-    const colorOptions = [
-        { id: "red", name: "Red" },
-        { id: "blue", name: "Blue" },
-        { id: "yellow", name: "Yellow" },
-        { id: "orange", name: "Orange" },
-        { id: "purple", name: "Purple" },
-        { id: "green", name: "Green" },
-        { id: "black", name: "Black" }
-    ];
-    res.status(200).send(colorOptions);
+    res.status(200).send(ItemService.colorOptions);
 });
 
 itemsRouter.post("/createMap", async (req: Request, res: Response) => {
